@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Post, Body, Put, Delete} from '@nestjs/common';
 import {  CategoriesModuleService} from './categories-module.service';
 
-@Controller('categories-module')
+@Controller('categories')
 export class CategoriesModuleController {
 
     constructor (
