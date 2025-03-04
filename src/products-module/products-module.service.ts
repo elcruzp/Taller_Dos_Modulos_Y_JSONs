@@ -15,15 +15,16 @@ export class ProductsModuleService {
 
             const jsonData = fs.readFileSync(filePath, 'utf-8');
 
-                if (!jsonData) {
+            if (!jsonData) {
                     throw new Error ('No data found in the file');
-                }
-               
+            }
+
             this.products = JSON.parse(jsonData);
         }catch(error){
             console.error ('Error loading products data:', error);
             this.products = [];
         }
+
     }
 
     findAll(){
