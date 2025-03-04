@@ -2,9 +2,10 @@ import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
 import * as path from 'path';
 
+
 @Injectable()
 export class CategoriesModuleService {
-    private categories =[]
+    private categories = [] 
 
     constructor(){
         // cargar los datos desde el archibo JSON
@@ -26,11 +27,11 @@ export class CategoriesModuleService {
     } 
 
     findAll(){
-        return this.categories;
+        return this.categories; 
     }
 
     findOneById(id: number){
-        return this.categories.find(category => Number (category) === Number (id));
+        return this.categories.find(categorie => Number (categorie) === Number (id));
     }
 
     
